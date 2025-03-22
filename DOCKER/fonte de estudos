@@ -1,0 +1,57 @@
+﻿https://docs.docker.com/get-started/docker-overview/
+
+
+
+# O comando a seguir executa um contêiner, anexa interativamente ao seu sessão de linha de comando local e executa o .ubuntu/bin/bash
+    docker run -i -t ubuntu /bin/bash
+
+# Quando você executa para encerrar o comando, o contêiner para, mas não é removido. Você pode iniciá-lo novamente ou removê-lo.
+    exit/bin/bash
+
+/*****************************************************************************************************************************************************/
+                                                Obtenha o Docker Desktop
+
+# Abra seu terminal CLI e inicie um contêiner executando o comando:docker run
+    docker run -d -p 8080:80 docker/welcome-to-docker
+
+# Para este contêiner, o front-end pode ser acessado na porta . Para abrir o site, visite http://localhost:8080 no seu navegador.
+    http://localhost:8080
+
+
+
+/*****************************************************************************************************************************************************/
+                                                Desenvolva com containers
+
+# Para começar, clone ou baixe o projeto como um arquivo ZIP para sua máquina local.
+    git clone https://github.com/docker/getting-started-todo-app
+
+# E depois que o projeto for clonado, navegue até o novo diretório criado pelo clone:
+    cd getting-started-todo-app
+
+# Depois de ter o projeto, inicie o ambiente de desenvolvimento usando o Docker Compose. Para iniciar o projeto usando a CLI, execute o seguinte comando:
+    docker compose watch
+
+# Você verá uma saída que mostra imagens de contêiner sendo puxadas para baixo, contêineres iniciando e muito mais. Não se preocupe se você não entender tudo neste momento. Mas, dentro de um momento ou dois, as coisas devem se estabilizar e terminar.
+# Abra seu navegador para http://localhost para ver o aplicativo em funcionamento. Pode levar alguns minutos para que o aplicativo seja executado. O aplicativo é um aplicativo de tarefas simples, portanto, sinta-se à vontade para adicionar um ou dois itens, marcar alguns como concluídos ou até mesmo excluir um item.
+
+    http://localhost
+
+
+/*****************************************************************************************************************************************************/
+                                                Docker compose 
+
+# Se você tem seguido os guias até agora, está trabalhando com aplicativos de contêiner único. Mas agora você está querendo fazer algo mais complicado - executar bancos de dados, filas de mensagens, caches ou uma variedade de outros serviços. Você instala tudo em um único contêiner? Executar vários contêineres? Se você executar vários, como conectá-los todos?
+
+# Uma prática recomendada para contêineres é que cada contêiner deve fazer uma coisa e fazê-la bem. Embora haja exceções a essa regra, evite a tendência de fazer com que um contêiner faça várias coisas.
+
+# Você pode usar vários comandos para iniciar vários contêineres. Mas você logo perceberá que precisará gerenciar redes, todos os sinalizadores necessários para conectar contêineres a essas redes e muito mais. E quando você terminar, a limpeza é um pouco mais complicada.docker run
+
+# Com o Docker Compose, você pode definir todos os seus contêineres e suas configurações em um único arquivo YAML. Se você incluir esse arquivo em seu repositório de código, qualquer pessoa que clonar seu repositório poderá começar a trabalhar com um único comando.
+
+# É importante entender que o Compose é uma ferramenta declarativa - basta defini-la e pronto. Você nem sempre precisa recriar tudo do zero. Se você fizer uma alteração, execute novamente e o Compose reconciliará as alterações em seu arquivo e as aplicará de forma inteligente.docker compose up
+    
+# inicialisa o docker compose
+    docker compose up
+
+# interrompe o docker compose    
+    docker compose down
