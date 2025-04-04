@@ -1,0 +1,3 @@
+﻿# O Airflow requer um diretório inicial e é usado por padrão, mas você pode definir um local diferente, se preferir. A variável de ambiente é usada para informar o fluxo de ar sobre o local desejado. Esta etapa de configuração da variável de ambiente deve ser feita antes de instalar o Airflow para que o processo de instalação saiba onde armazenar os arquivos necessários.~/airflowAIRFLOW_HOME
+
+export AIRFLOW_HOME=~/airflow
