@@ -54,5 +54,61 @@ def input_values_fermat():
     check_fermat(a,b,c,n)
 
 
+
+def is_triangle(a: float, b: float, c: float):
+    soma_ab = a+b
+    soma_ac = a+c
+    soma_bc = b+c
+    
+    if soma_ab ==  c or soma_ac == b or soma_bc == a:
+        print('yes')
+    else:
+        print('No')
+
+
+def input_values_is_triangle():
+    a = int(float(input('Informe o valor de A: ')))
+    b = int(float(input('Informe o valor de B: ')))
+    c = int(float(input('Informe o valor de C: ')))
+    
+    is_triangle(a,b,c)
+
+
+
+def recurse(n, s):
+    """_summary_
+
+    Args:
+        n (_type_): valor inical dp parametro, a recursão fara com que esse valor chegue a 0.
+        s (_type_): valor soma de !n
+    """
+    if n <= 0:
+        print(s)
+    else:
+        recurse(n-1, n+s)
+        
+
 segundos_para_data(tempo_em_segundos)
 input_values_fermat()
+is_triangle(45,30,15)
+recurse(-1, 0)
+
+
+import turtle
+
+bob = turtle.Turtle()
+
+def draw(t, length, n):
+    if n == 0:
+        return
+    angle = 50
+    t.fd(length * n)
+    t.lt(angle)
+    draw(t, length, n-1)
+    t.rt(2 * angle)
+    draw(t, length, n-1)
+    t.lt(angle)
+    t.bk(length * n)
+    
+    
+draw(bob,10,10)
