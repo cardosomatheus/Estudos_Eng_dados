@@ -21,7 +21,7 @@ for username, user_info in users.items():
 
 responses = {}
 # Define uma flag para sinalizar que a pesquisa está ativa
-polling_active = True
+polling_active = True 
 while polling_active:
 # Solicita o nome e a resposta do participante
     name = input("\nWhat is your name? ")
