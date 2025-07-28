@@ -4,10 +4,7 @@ def mysqrt(a, x=None):
     
     if x is None:
         x = 10
-    
     y = (x + a/x) / 2
-    
-
 
     raiz_quadrada = math.sqrt(a)
     print(f'valor Y: {y}, valor raiz: {raiz_quadrada}')
@@ -15,14 +12,10 @@ def mysqrt(a, x=None):
         return y
                 
     else:
-        #return
         return mysqrt(a=a, x=y)                
     
 
 a = 50.4253
 sq = math.sqrt(a)
 print(sq)
-#print(mysqrt(10))
-#print(12.02/2)
-
-print(float(a))
+print(a)
