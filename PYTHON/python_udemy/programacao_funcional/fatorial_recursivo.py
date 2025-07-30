@@ -12,5 +12,5 @@ if __name__ == '__main__':
     print(f'funcional: 0!:  {fatorial_funcional(0)} recursivo: 10!:  {fatorial_recursivo(0)}')   
     print(f'funcional: 1!:  {fatorial_funcional(1)} recursivo: 10!:  {fatorial_recursivo(1)}')   
     print(f'funcional: 5!:  {fatorial_funcional(5)} recursivo: 10!:  {fatorial_recursivo(5)}')   
-    print(f'funcional: 10!:  {fatorial_funcional(10)} recursivo: 10!:  {fatorial_recursivo(10)}')
+    print(f'funcional: 10!: {fatorial_funcional(10)} recursivo: 10!: {fatorial_recursivo(10)}')
 

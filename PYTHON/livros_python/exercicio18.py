@@ -36,7 +36,8 @@ def build_profile(first, last, **user_info):
     
     return user_info
 
-user_profile = build_profile('albert', 'einstein',location='princeton',field='physics')
+user_profile = build_profile('albert', 'einstein',location='princeton',
+                             field='physics')
 print(user_profile)
 
 def make_car (fabricante, modelo, **kwargs):
@@ -46,6 +47,7 @@ def make_car (fabricante, modelo, **kwargs):
     return kwargs
 
 
-car = make_car(fabricante='honda', modelo='Honda Fit', ano=2003, km=150.00, cor='preto')
+car = make_car(fabricante='honda', modelo='Honda Fit', ano=2003,km=150.00, 
+               cor='preto')
     
 print(car)
