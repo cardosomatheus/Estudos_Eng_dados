@@ -1,0 +1,77 @@
+﻿from pathlib import Path
+
+
+path = Path('PYTHON\livros_python\pi_digits.txt')
+content = path.read_text()
+
+#print(content)
+
+pi_string = ''
+for row in content.splitlines():
+    pi_string += row.strip()
+    #print(row)
+print(float(pi_string))    
+
+
+
+
+data_nascimento = int(input('Informe sua data de nascimento no formato ddmmyy: '))
+path_milion = Path('PYTHON/livros_python/pi_million_digits.txt')
+contents = path_milion.read_text()
+
+
+pi_string = ''
+for row in content.splitlines():
+    pi_string += row.strip()
+
+
+if str(data_nascimento) in pi_string:
+    print('Está !!')
+else:
+    print('Não :/')
+    
+    
+
+""" WEITE MANY ROWS IN FILE TEXT """
+contents = "I love programming.\n"
+contents += "I love creating new games.\n"
+contents += "I also love working with data.\n"
+path = Path('programming.txt')
+path.write_text(contents)
+
+
+
+""" 
+10.4 Convidados: Escreva um programa que solicite ao usuário seu nome. Quando
+responder, escreva o nome dele em um arquivo chamado guest.txt.
+
+10.5 Livro de convidados: Escreva um loop while que solicite o nome dos usuários.
+Colete todos os nomes inseridos e, em seguida, escreva esses nomes em um arquivo
+chamado guest_book.txt. Garanta que cada item apareça em uma linha nova no
+arquivo.
+"""
+
+user = str(input("Nome do usuario: "))
+
+path = Path('guest.txt')
+contents = f'{user}\n'
+
+path.write_text(contents)
+
+
+
+
+def count_words(path):
+    """ Conta o número aproximado de palavras em um arquivo"""
+    try:
+        contents = path.read_text(encoding='utf-8')
+    except FileNotFoundError:
+        print(f"Sorry, the file {path} does not exist.")
+    else:
+        # Conta o número aproximado de palavras no arquivo:
+        words = contents.split()
+        num_words = len(words)
+        print(f"The file {path} has about {num_words} words.")
+        path = Path('alice.txt')
+        count_words(path)
+        

@@ -82,6 +82,7 @@ class User:
         """ redefine o valor de login_attempts para 0 """
         self.login_attempts = 0
 
+"""
 restaurant = Restaurant('BK','delivery')
 
 restaurant.describe_number_served()
@@ -104,3 +105,4 @@ user1.describe_login_attempts()
 
 user1.reset_login_attempts()
 user1.describe_login_attempts()
+"""
