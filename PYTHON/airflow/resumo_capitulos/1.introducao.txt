@@ -1,0 +1,41 @@
+Caracteristica de uma ferramenta de orquestração.
+
+
+.log
+.auditoria.
+.monitoramento/alertas
+.recuperação a  partir de um ponto
+.dados históricos
+.alta disponibilidade
+.distribuição de carga
+
+
+DAG: Grafo Direcionado Aciclico.
+    .Grafo: Conjunto de vértices  e aresta.
+    .Direcionado: Possui uma direção especifica.
+    .Aciclico: Não circular.
+
+
+
+DAG:
+    .É um script python.
+    .Não precisa ter logica.
+    .Um mesmo script pode ter multiplas DAGs.
+    .Uma DAG pode ter uma ou mais tasks.
+    .Tasks possui dependência.
+
+
+ 
+ Operator: 
+    .O que de fato é executado.
+    .Algo a ser feito/processado no pipeline
+    .Uma vez Instanciado, se torna uma task
+    .Existem muitos tipos, derivados de BaseOperator (Sensor, Tranfer, Action)
+
+Tasks:
+    .Instancia de um Operator
+
+
+Provider: 
+    .Interação com outras ferramenta como (Mysql, AWS, MOngoDB, Reddis)
+
