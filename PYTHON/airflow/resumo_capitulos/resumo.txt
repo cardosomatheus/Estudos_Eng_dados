@@ -1,3 +1,12 @@
+Configurado o Airflow pelo docker seuindo a documentação.
+# https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html#accessing-the-environment
+
+
+
+ambiente:
+    .Airflows rodando internamente dentro do docker.
+
+
 Caracteristica de uma ferramenta de orquestração.
 
 
@@ -10,7 +19,7 @@ Caracteristica de uma ferramenta de orquestração.
 .distribuição de carga
 
 
-DAG: Grafo Direcionado Aciclico.
+DAG: Grafo Direcionado Aciclico (descrição):
     .Grafo: Conjunto de vértices  e aresta.
     .Direcionado: Possui uma direção especifica.
     .Aciclico: Não circular.
@@ -26,7 +35,7 @@ DAG:
 
 
  
- Operator: 
+Operator: 
     .O que de fato é executado.
     .Algo a ser feito/processado no pipeline
     .Uma vez Instanciado, se torna uma task
@@ -39,3 +48,16 @@ Tasks:
 Provider: 
     .Interação com outras ferramenta como (Mysql, AWS, MOngoDB, Reddis)
 
+
+Operadores:
+    BaseOperator: Executa um comando shell/script
+    PythonOpertor: Executa uma função python
+    DummyOperator: Não faz nada, mas é util para organização.
+    EmailOperator: Envia um EmailOperator
+    SQLOperator: Executa uma consulta sql
+    FileSensor: Aguarda até que um arquivo seja criado/modificado.
+    HttpSensor: Aguarda uma solicitação HTTP seja bem sucedida.
+    TriggerDagRunOperator: Executa uma DAG de outra DAG
+
+Trigger Rule:
+    all_success: 

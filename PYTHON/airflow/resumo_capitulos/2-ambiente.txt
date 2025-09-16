@@ -1,7 +1,0 @@
-Configurado o Airflow pelo docker seuindo a documentação.
-# https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html#accessing-the-environment
-
-
-
-ambiente:
-    .Airflows rodando internamente dentro do docker.
