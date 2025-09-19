@@ -1,19 +1,27 @@
 from airflow import DAG
 from airflow.operators.bash import BashOperator
 from airflow.operators.trigger_dagrun  import TriggerDagRunOperator
-#from airflow.operators.import TriggerDagRunOperator
-from datetime import datetime
+from datetime import datetime, timedelta
 
 # Aumentando a complexidade da DAG
 
 # Iniciando aprendizado sobre trigger role
-default_args = {'start_date': datetime(2022,9,5)}
+default_args = {
+    'depends_on_past' : False,
+    'start_date': datetime(2022,9,5),
+    'email' : ['teste:teste.com'],
+    'email_on_failure' : False,
+    'email_on_retry' : False,
+    'retry' : 1,
+    'retry_delay' : timedelta(seconds=10)
+}
 
 # DAG
-dag = DAG('decima_dag1',
+dag = DAG('decima_dag11',
            default_args=default_args,
            description='decima dag no airflow1',
-           schedule=None,
+           schedule='@hourly',
+           tags=['pipeline','processo','tag'],
            catchup=False)
 
 
