@@ -25,7 +25,6 @@ task3 = BashOperator(task_id="tsk3",bash_command="sleep 1",dag=dag )
 task4 = BashOperator(task_id="tsk4",bash_command="exit 1",dag=dag )
 task5 = BashOperator(task_id="tsk5",bash_command="sleep 1",dag=dag, trigger_rule='none_failed' )
 task6 = BashOperator(task_id="tsk6",bash_command="sleep 1",dag=dag, trigger_rule='none_failed' )
-
 send_email = EmailOperator(task_id="send_email",
                 to="aws@evoluth.com.br",
                 subject="Airflow Error",
