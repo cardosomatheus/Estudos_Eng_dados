@@ -60,4 +60,17 @@ Operadores:
     TriggerDagRunOperator: Executa uma DAG de outra DAG
 
 Trigger Rule:
-    all_success: 
+    são gatilho que executam task conforme o objetivo como skipar tasks, enviar email et...
+
+
+Dummy(Empty):
+    OPerador que não faz nada, mas é bom para organizar e evitar conflitos.
+
+
+Variaveis:
+    Permite que hajá compartilhamento entre dags.
+    Usadas em todo pipeline
+
+Xcom:   
+    informação dinamica.
+    entre tarefas da propria dag.
