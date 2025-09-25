@@ -9,7 +9,7 @@ from airflow.operators.empty import EmptyOperator
 default_args = {
     'depends_on_past' : False,
     'start_date': datetime(2022,7,9),
-    'email' : ['cardosomcds1@gmail.com'],
+    'email' : ['cssssssss@gmail.com'],
     'email_on_failure' : True,
     'email_on_retry' : False,
     'retry' : 1,

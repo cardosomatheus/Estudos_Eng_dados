@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 default_args = {
     'depends_on_past' : False,
     'start_date': datetime(2022,7,9),
-    'email' : ['cardosomcds1@gmail.com'],
+    'email' : ['csssss@gmail.com'],
     'email_on_failure' : True,
     'email_on_retry' : False,
     'retry' : 1,
