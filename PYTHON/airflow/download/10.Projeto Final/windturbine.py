@@ -4,7 +4,9 @@ from airflow.operators.python_operator import PythonOperator
 from airflow.operators.python_operator import BranchPythonOperator
 from airflow.operators.email_operator import EmailOperator
 from airflow.sensors.filesystem import FileSensor
+#from airflow.providers.postgres.operators.postgres import PostgresOperator
 from airflow.providers.postgres.operators.postgres import PostgresOperator
+
 from airflow.models import Variable
 from airflow.utils.task_group import TaskGroup
 from datetime import datetime, timedelta
