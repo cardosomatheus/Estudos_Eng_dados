@@ -11,7 +11,7 @@ with DAG(
     default_args={
         "depends_on_past": False,
         "retries": 1,
-        "retry_delay": timedelta(minutes=5),
+        "retry_delay": timedelta(minutes=3),
         # 'queue': 'bash_queue',
         # 'pool': 'backfill',
         # 'priority_weight': 10,

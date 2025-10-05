@@ -1,3 +1,8 @@
+"""
+    DAG CRIADA CONFORME TUTORIAL NA DOCUMENTAÇÃO DO AIRFLOW E MODIFICADA CONFORME SUGESTÕES.
+"""
+
+
 import json
 import pendulum
 
@@ -33,7 +38,7 @@ def tutorial_task_airflow_api() -> None:
             hardcoded JSON string.
         """
 
-        data_string = '{"1001":301.59, "1002":501.59, "1003":701.59, "1004":1001.42,  "1005":10.90}'
+        data_string = '{"1001":301.59, "1002":501.59, "1003":701.59, "1004":1001.42,"1005":10.90, "1006":"bean"}'
         order_data_dict = json.loads(data_string)
         return order_data_dict
     
@@ -47,9 +52,21 @@ def tutorial_task_airflow_api() -> None:
         """
         quantity_value = 0
         total_order_value = 0
-        for value in order_data_dict.values():
+        for value in order_data_dict.values():        
+            # only values numberes
+            if isinstance(value,int):      value = int(value)
+            elif isinstance(value, float): value = float(value)
+            else: continue
+            
+           
+           #  only values long then 100 
+            if value < 100:
+                continue
+
+
             total_order_value += value
             quantity_value += 1
+
 
         return {"total_order_value": total_order_value,
                 "Quantity_order":quantity_value}
