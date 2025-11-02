@@ -19,7 +19,8 @@ class Solution:
         return restos
 
 
-
 n = 3
 s = Solution()
 print(s.countBits(n))
+
+n.bit_count()
