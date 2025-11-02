@@ -25,16 +25,13 @@ class SolutionSeach:
 
 
     def binary_search(self,nums, n, start_point=0, end_point=0):
-        step = 0
         if end_point == 0: 
             end_point  = len(nums)
         
         while start_point < end_point:
-            step += 1
             mid = int((start_point+end_point)/2)
 
             if nums[mid] == n:
-                print(f'step: {step}')
                 return mid
         
             elif nums[mid] > n:
